@@ -1,0 +1,159 @@
+Scenario 1
+An algortihm that asks a user to enter a positive number repeatedly until the user enters a zero value, then determines and outputs the largest of the number that were entered.
+
+1. Set largest to 0
+2. Ask user to enter a poitive number
+3. Store the number
+4. Repeat 2 and 3 until the user enters 0
+5. When 0 is entered, stop accepting numbers
+6. Output the largest of numbers that were entered
+
+
+Pseudocode
+
+Start
+
+Set largest to 0
+request user to enter a value
+IF input value> 0
+	continue and store the number
+ELSE 
+	if value entered is 0 stop accepting numbers
+Output the largest of numbers that were entered
+
+End
+
+
+
+Scenario 2
+An algorithm that requests a user to input their name and then stores their name in a variable called first_name. Subsequently, the algorithm should print out first_name along with the phrase "Hello, World".
+
+1. Create a variable called First_name.
+2. Request user to input their name and stores it i the first_name.
+3. Print the users name followed by the phrase "Hello, World".
+
+Pseudocode
+
+Start
+
+Declare First_name
+
+	name=input "What is your name?"
+
+	Input first_name 
+Output first_name, "Hello, World"
+
+End
+
+
+
+Scenario 3
+An algorithm that read an arbitary number of integers and then returns their arithmetic average.
+
+1. Start algorithm
+2. Create a variable called total and put 0 in it.
+3. Create another variable called count and put it 0 in it.
+4. Ask the user to enter a number.
+5. If the user enters -1, stop asking for numbers and go to step 9.
+6. Add the number to total.
+7. Add 1 to count because another number has been entered.
+8. Go back and ask the user fir another number.
+9. Divide total by count to find the average.
+10. Display the avergae.
+11. End algorithm.
+
+Pseudocode
+
+Start
+
+Set total to 0
+Set count to 0
+
+Ask the user to enter a number
+
+WHILE the number is not -1
+	Add the number to total
+	Add 1 to count
+	Ask the user to enter another number
+END WHILE
+
+
+Calculate average = total / count
+
+Display the average
+END 
+
+
+Scenario 4
+An algorithm that reads a grocery list and prints out the products *in alphabetical order) that are still left to buy.
+. 
+1. Read a lsit of grocery items.
+2. Put the items in alphabetical order (A to Z)
+3. Print only the items that are still left to buy.
+
+Products
+Milk- Bought
+Sugar- Bought
+Eggs- Not bought
+Banana's-Not bought
+Jam- Not bought
+
+The algorithm should print
+Banana's
+Eggs
+Jam
+
+These items are not bought and are in alphabetical order
+
+Pseudocode
+
+Start
+
+Read the grocery list
+
+Sort the grocery list into alphabetical order
+
+FOR each product in the grocery list
+	IF the product has not been bought 
+	THEN
+	Print the product name
+	END IF
+END FOR
+END
+
+
+Scenario 5
+An algorithm for the flowchart provided.
+
+Start
+Read two values: X and Y
+Calculate: 
+	S= X=Y
+	A=S/2
+	P= X*Y
+
+Start
+INPUT X, Y(Ask user to enter two numbers)
+S= X+Y(Add the two numbers)
+A=S/2(divide the sum of the 2)
+P=X*Y(multiple the two numbers)
+Output S, A, P(Output the Sum, Average and Product)
+END
+
+
+Start
+request input from user to enter two numbers
+define num1  and num2
+INPUT num1= "Please enter the first number:"
+INPUT num2= "Please enter the second number:"
+Sum= num1 = num2
+Print "the sum of the two numbers is ="answer"
+Average= answer divided by 2
+Print "The average"
+Product= num1*num2
+Print "The product"
+Output Sum, Avergae and Product
+End
+ 
+
+
