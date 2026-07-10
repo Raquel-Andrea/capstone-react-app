@@ -1,0 +1,22 @@
+1. What is the World Wide Web?
+
+The World Wide Web, is commonly known as the Web. It can be accessed over the Internet. It is a system of websites and a collections of interconnected web pages using a web browser.
+
+
+2.Explain the functional differences between a web application's front end and back end. 
+
+The front end of a web application is what the user sees and interacts with, for example, when you visit a website, the front end includes: buttons, menus, images, forms, text, navigation bars amd animations. Its goal is to create attractive, interactive and user-friendly websites. Whereas, the back end of a web application is what happens behind the scenes, it is what the user cannot see. The back end makes the web application functional, such as storing information in a database, stores usernames and passwords, processes payments, saves order details and it can send back information stores in the back end for the front end to visualize it for the user.
+
+3. Describe what occurs on the back end during a web interaction using the Google query example or create your own example.
+
+When I search on Google for a definition of a word, the back end of the web application receives my search request, processes it by searching its database for relevant information, and sends the results back to the front end and that information is received by me as the user, with what is displayed in the front end.
+
+
+4. What is the MERN stack?
+
+The MERN stack is a collection of four technologies that developers use together to build full stack web applications for websites with both a front end and a back end)
+MERN stands for:
+M-MongoDB
+E-Express.js
+R-React
+N-Node.js
