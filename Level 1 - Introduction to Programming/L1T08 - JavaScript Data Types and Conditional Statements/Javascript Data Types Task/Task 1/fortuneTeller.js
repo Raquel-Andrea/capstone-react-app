@@ -1,0 +1,11 @@
+let motherName = prompt("Enter your mother's first name:");
+let streetName = prompt("Enter the street you grew up on:");
+let favouriteColour = prompt("What was your favourite colour as a child?");
+let age = prompt("Enter your current age:");
+let number = prompt("Choose a number between 1 and 10:");
+let meetFriend = number;
+let bestFriend = motherName + "" + streetName;
+let married = Number(age) + Number(number);
+let children = Number(age) % Number(number);
+let hairYear = Math.round(Number(age) / Number(number));
+alert(`In ${meetFriend} years you are going to meet your best friend named ${bestFriend}. You will get married in ${married} years and have ${children} children. In ${hairYear} years you are going to dye your hair ${favouriteColour}.`);
