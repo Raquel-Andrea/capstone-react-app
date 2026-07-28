@@ -1,0 +1,72 @@
+Response Body
+
+Request Headers
+-Host
+-User-Agent
+-Accept
+
+Response Headers
+-HTTP/1.1 200 OK
+-Content-Type
+-Content-Length
+-Date
+
+HTTP Status Code
+200 OK
+
+Connection Workflow
+
+1. Client sends a GET request.
+2. Server receives the request.
+3. Server processes it.
+4. Server sends back a respond.
+
+
+How is POST different from GET?
+GET
+-Requests information.
+-No request body.
+
+POST
+-Sends information.
+-Uses a request body.
+
+What is the payload?
+key=value
+
+The payload is the data sent to the server.
+
+How is it transmitted?
+It is sent inside the HTTP request body.
+
+Response Body
+The server sends back the same data(key=value) to show it received it correctly.
+
+
+
+Status Codes
+404 Not Found
+The requested page or resource could not be found.
+
+403 Forbidden
+The server understands the request but does not allow access.
+
+How are these errors communication?
+The server returns an HTTP status code(404 or 403) together with a response headers explaining the result.
+
+HTTP INVESTIGATION
+Commands Executed 
+
+curl -v https:/postman-echo.com/get
+curl -X POST https://postman-echo.com/post
+curl -I https://postman-echo.com/status/404
+curl -I https://postman-echo.com/status/403
+
+Key Takeaways
+-GET is used to request information from a server.
+-POST is used to send information to a server.
+-HTTP status codes tell us whether a request was successful or not.
+-200 OK means the request was successful.
+-404 Not Found means the requested resource does not exist.
+-403 Forbidden means the server understands the request but denies access.
+-HTTP messages contain request headers, response header, status code, and sometimes a message body.
