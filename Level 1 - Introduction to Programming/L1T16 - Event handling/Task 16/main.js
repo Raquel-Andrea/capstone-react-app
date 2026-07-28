@@ -9,12 +9,12 @@ let groceryItems = [
 ];
 
 // Function to display the grocery items
-function displayGroceryItems() {
+function displayItems() {
 
     // Get the unordered list element from the HTML
     let shoppingList = document.getElementById("itemList");
 
-    list.innerHTML = "";
+    shoppingList.innerHTML = "";
 
     // Loop through the groceryItems array and create list items for each grocery item
     groceryItems.forEach(function(item) {
@@ -24,45 +24,49 @@ function displayGroceryItems() {
 
     //Add the grocery item text to the list item
     listItem.textContent = item;
+
     let span = document.createElement("span");
     span.className = "close";
-    span.textContent = "\U00d7";
-    li.appendChild(span);
-    list.appendChild(li);
+    span.textContent = "\u00D7";
+
+    listItem.appendChild(span);
+    shoppingList.appendChild(listItem);
     });
+
     setDefaultChecked();
     deleteItems();
-
+}
 //Mark two items as already bought by adding the "checked" class to them
-function setDefaultCheckedItems() {
+function setDefaultChecked() {
 
     let items = document.querySelectorAll("#itemList li");
 
-    if (items.length >1) {
+    if (items.length >= 4) {
         items[1].classList.add("checked");
-    }
-    if(items.length>3){
-
         items[3].classList.add("checked");
     }
 }
-//Add Item
-function addItem(){
-    let input = document.getElementById("itemInput");
-    let value = input.value.trim();
+//Add a new Item
+function addItems(){
 
+    let input = document.getElementById("itemInput");
+    let newItem = input.value.trim();
+
+    if (newItem === "") {
+        alert("Please enter an item");
+    } else {
+        groceryItems.push(newItem);
+    }
+    
+    input.value = "";
+    displayItems();
 }
-else{
-    groceryItem.push(value);
-}
-input.value="";
-displayGroceryItems();
-}
+
 //Delete Item
-function deleteItem(){
-    let closeButtons=document.querySelectorAll(".close");
-    close.Buttons.forEach(function(button,index){
-        button.onclick=function(event){
+function deleteItems() {
+    let closeButtons = document.querySelectorAll(".close");
+    closeButtons.forEach(function(button,index){
+        button.onclick = function(event) {
             event.stopPropagation();
             groceryItems.splice(index,1);
             displayItems();
@@ -71,15 +75,15 @@ function deleteItem(){
 }
 
 //Toggle checked Items
-document.getElementById("itemList").addEverListener("click", function(event){
-    if(event.target.tagName==="Li"){
+document.getElementById("itemList").addEventListener("click", function(event) {
+    if(event.target.tagName === "LI") {
         event.target.classList.toggle("checked");
     }
 });
 
 //Enter key Functionality
 document.getElementById("itemInput").addEventListener("keyup",function(event){
-    if(event.key==="Enter"){
+    if(event.key === "Enter") {
         document.getElementById("addButton").click();
     }
 });
