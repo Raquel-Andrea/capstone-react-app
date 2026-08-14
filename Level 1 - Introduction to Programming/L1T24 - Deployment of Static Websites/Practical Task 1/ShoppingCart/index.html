@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="Stop">
+    <header class = "navbar">
+        <div class = "logo">
+            ShopEasy
+        </div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#products">Products</a>
+            <a href="#cart">Cart</a>
+        </nav>
+
+    </header>
+
+
+<div class="hero">
+    <h1>Shopping Cart System</h1>
+    <p>Browse products, add them to your cart, and shop with ease.</p>
+</div>
+
+<h2 id="welcomeMessage"></h2>
+<label>Select Font:</label>
+<select id="fontSelector">
+    <option value="Arial">Arial</option>
+    <option value="Times New Roman">Times New Roman</option>
+    <option value="Verdana">Verdana</option>
+</select>
+<hr>
+<h2 id= "products">Products</h2>
+
+<div class = "container"> 
+<div class="products">
+    <div class="product">
+        <img src="images/laptop.png" alt="Laptop">
+    <div> 
+    <h3>Laptop</h3>
+    <p>Price: R15000</p>
+    <button onclick="addToCart('Laptop', 15000)">Add to Cart</button>
+</div>
+</div>
+
+<div class="product">
+    <img src="images/phone.png" alt="Phone">
+    <div> 
+    <h3>Phone</h3>
+    <p>Price: R8000</p>
+    <button onclick="addToCart('Phone', 8000)">Add to Cart</button>
+</div>
+</div>
+
+<div class="product">
+    <img src="images/headphones.png" alt="Headphones">
+    <div> 
+    <h3>Headphones</h3>
+    <p>Price: R1200</p>
+    <button onclick="addToCart('Headphones', 1200)">Add to Cart</button>
+</div>
+</div>
+</div>
+<div class = "cart" id="cart"> 
+<hr>
+<h2>Your Cart</h2>
+
+<ul id ="cartItems"></ul>
+
+<h3>Total: R<span id = "totalPrice">0</span></h3>
+    
+    <button onclick = "clearCart()">Clear Cart</button>
+
+<p id = "cacheMessage"></p>
+</div>
+</div>
+<script src = "script.js"></script>
+
+</body>
+</html>
