@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chef's Favourite Meals</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <nav class="navbar">
+
+        <div class="nav-container">
+
+            <a href="#home" class="logo">
+                Chef's Favourite
+            </a>
+
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#menu">Menu</a>
+                <a href="#orders">Orders</a>
+                <a href="#about">About</a>
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- HOME -->
+
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+
+                <p class="small-heading">
+                    WELCOME TO THE KITCHEN
+                </p>
+
+                <h1>
+                    Chef's Favourite Meals
+                </h1>
+
+                <p class="hero-text">
+                    Discover delicious meals, choose your favourite
+                    ingredients and place your order with ease.
+                </p>
+
+                <a href="#menu" class="hero-button">
+                    Explore Our Menu
+                </a>
+
+            </div>
+
+
+            <div class="hero-image">
+
+                <img
+                    src="https://www.themealdb.com/images/media/meals/wvqpwt1468339226.jpg"
+                    alt="Delicious food"
+                >
+
+            </div>
+
+        </section>
+
+
+        <!-- FEATURED MENU -->
+
+        <section class="menu-section" id="menu">
+
+            <div class="section-heading">
+
+                <p class="small-heading">
+                    OUR FAVOURITES
+                </p>
+
+                <h2>
+                    Featured Meals
+                </h2>
+
+                <p>
+                    A few delicious dishes from our kitchen.
+                </p>
+
+            </div>
+
+
+            <div class="meal-grid">
+
+                <article class="meal-card">
+
+                    <img
+                        src="https://www.themealdb.com/images/media/meals/1548772327.jpg"
+                        alt="Chicken meal"
+                    >
+
+                    <div class="meal-content">
+
+                        <p class="meal-category">
+                            CHEF'S CHOICE
+                        </p>
+
+                        <h3>
+                            Chicken Special
+                        </h3>
+
+                        <p>
+                            A delicious and comforting meal
+                            prepared with fresh ingredients.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="meal-card">
+
+                    <img
+                        src="https://www.themealdb.com/images/media/meals/1529444830.jpg"
+                        alt="Pasta meal"
+                    >
+
+                    <div class="meal-content">
+
+                        <p class="meal-category">
+                            POPULAR
+                        </p>
+
+                        <h3>
+                            Creamy Pasta
+                        </h3>
+
+                        <p>
+                            Rich, creamy and perfect for
+                            a relaxing dinner.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="meal-card">
+
+                    <img
+                        src="https://www.themealdb.com/images/media/meals/1549542877.jpg"
+                        alt="Rice meal"
+                    >
+
+                    <div class="meal-content">
+
+                        <p class="meal-category">
+                            HOUSE FAVOURITE
+                        </p>
+
+                        <h3>
+                            Homemade Rice
+                        </h3>
+
+                        <p>
+                            A warm and satisfying dish
+                            made with delicious ingredients.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ORDER SECTION -->
+
+        <section class="order-section" id="orders">
+
+            <div class="section-heading">
+
+                <p class="small-heading">
+                    PLACE YOUR ORDER
+                </p>
+
+                <h2>
+                    What are you craving?
+                </h2>
+
+                <p>
+                    Enter a main ingredient and let the chef
+                    find a delicious meal for you.
+                </p>
+
+            </div>
+
+
+            <!-- TAKE ORDER -->
+
+            <div class="order-box">
+
+                <h3>
+                    Take an Order
+                </h3>
+
+                <div class="order-form">
+
+                    <input
+                        type="text"
+                        id="ingredientInput"
+                        placeholder="Enter main ingredient"
+                    >
+
+                    <button id="orderButton">
+                        Take Order
+                    </button>
+
+                </div>
+
+                <p id="orderMessage"></p>
+
+            </div>
+
+
+            <!-- INCOMPLETE ORDERS -->
+
+            <div class="orders-box">
+
+                <div class="box-heading">
+
+                    <div>
+                        <p class="small-heading">
+                            KITCHEN QUEUE
+                        </p>
+
+                        <h3>
+                            Incomplete Orders
+                        </h3>
+                    </div>
+
+                </div>
+
+                <div id="ordersList"></div>
+
+            </div>
+
+
+            <!-- COMPLETE ORDER -->
+
+            <div class="complete-box">
+
+                <p class="small-heading">
+                    ORDER MANAGEMENT
+                </p>
+
+                <h3>
+                    Complete an Order
+                </h3>
+
+                <div class="order-form">
+
+                    <input
+                        type="number"
+                        id="orderNumberInput"
+                        placeholder="Enter order number"
+                    >
+
+                    <button id="completeButton">
+                        Complete Order
+                    </button>
+
+                </div>
+
+                <p id="completeMessage"></p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ABOUT -->
+
+        <section class="about-section" id="about">
+
+            <div class="about-content">
+
+                <p class="small-heading">
+                    ABOUT OUR KITCHEN
+                </p>
+
+                <h2>
+                    Simple ingredients.
+                    Delicious meals.
+                </h2>
+
+                <p>
+                    Chef's Favourite Meals is a simple ordering
+                    experience designed to help you discover
+                    delicious dishes based on the ingredients
+                    you love.
+                </p>
+
+                <p>
+                    Choose an ingredient, discover a meal and
+                    add it to your kitchen order queue.
+                </p>
+
+            </div>
+
+
+            <div class="about-card">
+
+                <p class="small-heading">
+                    TODAY'S KITCHEN
+                </p>
+
+                <h3>
+                    Freshly prepared
+                </h3>
+
+                <p>
+                    Every meal starts with an ingredient
+                    and ends with something delicious.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+                <h3>
+                    Chef's Favourite
+                </h3>
+
+                <p>
+                    Delicious ideas for every occasion.
+                </p>
+            </div>
+
+            <div class="footer-links">
+
+                <a href="#home">Home</a>
+                <a href="#menu">Menu</a>
+                <a href="#orders">Orders</a>
+                <a href="#about">About</a>
+
+            </div>
+
+        </div>
+
+        <p class="copyright">
+            Chef's Favourite Meals
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
