@@ -1,0 +1,56 @@
+QUESTION 1
+
+A) Find tracks that were skipped (skipped = 'TRUE') immediately after being played for less than 10 seconds, and count how many times this happened for each track. 
+
+The results identify tracks that were skipped shortly after they started playing, with less than 10 seconds of playback time before the skip. A high number of these early skips may indicate that listeners quickly lost interest in the track or that the track did not match their expectations. This can also help identify songs that frequently fail to keep listeners engaged during the first few seconds.
+
+B) If a song has a lot of skips but a high total plays, what does that mean?
+
+A song with a high number of total plays and a high number of skips suggests that the song is popular and frequently listened to, but listeners may often decide to skip it. This could mean the song attracts listeners or is frequently selected, but it does not always maintain their interest.
+
+For example, “You Sexy Thing” by Hot Chocolate was played 121 times and skipped 8 times. This shows that the song receives frequent plays, while also being skipped relatively often.
+
+QUESTION 2
+
+A) Identify tracks that users manually selected the most(vs autoplay).
+
+The results show which tracks users manually selected most often instead of having them automatically played. “Ode To The Mets” by The Strokes had the highest number of manual selections, with 86 plays. This suggests that users intentionally chose this track more frequently than the other tracks in the dataset.
+
+B) Find the songs that auto played but had the highest skip rates-what's going wrong?
+
+The results show that some automatically played songs have relatively high skip rates. “Isn't She Lovely” by Stevie Wonder had the highest skip rate at 35%, followed by “Photograph” by Ed Sheeran and “Superheroes” by The Script, both at 33.33%. This suggests that the automatic recommendations were not always matching the user's preferences. Users frequently skipped these songs shortly after they were automatically selected, which may indicate that the recommendation system needs to improve its understanding of individual listening preferences.
+
+
+
+QUESTION 3
+
+A) Find artists that appear more than twice in your music data (overplay problem).
+
+The results show that some artists appear much more frequently than others in the listening data, which indicates an overplay problem. The Beatles have the highest number of plays, with 13,621, followed by The Killers with 6,878 and John Mayer with 4,835. This suggests that the playlist is heavily concentrated around a small number of artists. To create a more balanced playlist, tracks from these frequently played artists could be reduced and more tracks from less frequently played artists could be introduced.
+
+B) What are the longest-played tracks that were played with shuffle disabled?
+
+The results show the longest-played tracks when shuffle was disabled. “Tubular Bells - Pt. 1” by Mike Oldfield had the longest playback time at 1,651,125 milliseconds. Several Pink Floyd and Howard Shore tracks also had very long listening times. This suggests that when users intentionally listened without shuffle, they tended to stay with certain tracks for longer periods, indicating stronger engagement with those songs.
+
+
+QUESTION 4
+
+A) Find sessions where a user skipped 5+ songs in under a minute (bad session).
+
+The rage skip detector identified multiple periods where five or more songs were skipped within one minute. Several periods contained a particularly high concentration of skips, indicating sessions where users rapidly rejected multiple tracks. This may suggest that the recommendations during these periods were poorly matched to the listener's preferences. The results should also be interpreted carefully because some records have identical or very close timestamps, which can create unusually high skip counts.
+
+B) Is there a pattern? Are these specific artists, albums, or platforms?
+There is a noticeable pattern in the skip data. Android has a high number of skipped songs, and some artists and albums appear repeatedly among the most-skipped tracks. The Script and The Beatles are particularly prominent in the results. This suggests that both the listening platform and specific artists or albums may contribute to higher skipping behaviour.
+
+QUESTION 5
+Artists with a Single Standout Hit
+
+The analysis identified 243 artists where at least 90% of their plays came from one track. Several artists had 100% of their plays coming from a single song. This suggests that listeners often focus on an artist's biggest or most popular hit instead of listening to multiple songs from the artist's catalogue. The data therefore shows a strong single-hit pattern among many artists.
+
+
+
+
+
+
+
+
