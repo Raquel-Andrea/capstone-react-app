@@ -1,0 +1,9 @@
+/* Keep the main application content readable and centred
+   while building the different pages. */
+#root {
+  min-height: 100vh;
+}
+
+.app {
+  min-height: 100vh;
+}

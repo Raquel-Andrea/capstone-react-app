@@ -1,0 +1,118 @@
+/* Styles the main navigation header and uses the event-planning
+   image as a visual background across the application. */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  overflow: hidden;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(62, 40, 125, 0.9),
+      rgba(112, 72, 170, 0.78),
+      rgba(62, 40, 125, 0.9)
+    ),
+    url("../assets/event-header.png") center center / cover no-repeat;
+  color: white;
+  box-shadow: 0 5px 20px rgba(48, 35, 88, 0.2);
+}
+
+/* Keeps the navigation content centered and prevents it from
+   becoming too wide on large screens. */
+.header-container {
+  width: min(1200px, 100%);
+  min-height: 76px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.logo {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  white-space: nowrap;
+  transition: opacity 0.2s ease;
+}
+
+.logo:hover {
+  opacity: 0.85;
+}
+
+/* Keeps the navigation links aligned while allowing them to
+   wrap naturally on smaller screens. */
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+}
+
+.navigation a,
+.nav-logout-button {
+  padding: 0.55rem 0.9rem;
+  border: none;
+  border-radius: 999px;
+  background: transparent;
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.navigation a:hover,
+.nav-logout-button:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transform: translateY(-1px);
+}
+
+.nav-logout-button {
+  font-family: inherit;
+}
+
+/* Adjusts the header for tablets and smaller screens. */
+@media (max-width: 800px) {
+  .header-container {
+    min-height: auto;
+    padding-top: 0.9rem;
+    padding-bottom: 0.9rem;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .navigation {
+    justify-content: center;
+  }
+}
+
+/* Uses a smaller navigation layout for mobile devices. */
+@media (max-width: 500px) {
+  .header-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .logo {
+    font-size: 1.3rem;
+  }
+
+  .navigation {
+    width: 100%;
+    gap: 0.2rem;
+  }
+
+  .navigation a,
+  .nav-logout-button {
+    padding: 0.45rem 0.65rem;
+    font-size: 0.85rem;
+  }
+}

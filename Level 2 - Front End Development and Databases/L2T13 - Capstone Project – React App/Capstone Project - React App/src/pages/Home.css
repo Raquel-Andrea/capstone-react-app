@@ -1,0 +1,240 @@
+/* Styles the main landing page and creates the visual introduction
+   to the Event Planner application. */
+
+.home-page {
+  min-height: calc(100vh - 76px);
+}
+
+/* Creates a colorful hero section that immediately introduces
+   the purpose of the application. */
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  padding: 6rem 2rem;
+  background:
+    radial-gradient(circle at 10% 20%, rgba(255, 193, 122, 0.55), transparent 28%),
+    radial-gradient(circle at 90% 15%, rgba(178, 157, 255, 0.6), transparent 30%),
+    linear-gradient(135deg, #6c4ed9, #8f6de8 50%, #ef7f91);
+  color: white;
+}
+
+/* Adds decorative shapes without requiring additional HTML elements. */
+.hero-section::before,
+.hero-section::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero-section::before {
+  width: 260px;
+  height: 260px;
+  right: -80px;
+  bottom: -100px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.hero-section::after {
+  width: 180px;
+  height: 180px;
+  left: -60px;
+  top: -60px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Provides a small introductory label above the main heading. */
+.eyebrow {
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  color: #ffe7a8;
+}
+
+/* Makes the main heading the strongest visual element on the page. */
+.hero-content h1 {
+  margin-bottom: 1.5rem;
+  font-size: clamp(2.5rem, 6vw, 4.8rem);
+  line-height: 1.05;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+/* Keeps the introductory text readable against the colorful
+   background while limiting the line length. */
+.hero-description {
+  max-width: 680px;
+  margin: 0 auto 2.5rem;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Uses contrasting button styles so the primary action is easy
+   to identify while the secondary action remains visible. */
+.primary-button,
+.secondary-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 150px;
+  padding: 0.9rem 1.5rem;
+  border-radius: 999px;
+  font-weight: 700;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.primary-button {
+  background: #ffffff;
+  color: #6242c5;
+  box-shadow: 0 10px 25px rgba(37, 23, 84, 0.2);
+}
+
+.secondary-button {
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  color: white;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.primary-button:hover,
+.secondary-button:hover {
+  transform: translateY(-3px);
+}
+
+.primary-button:hover {
+  box-shadow: 0 14px 30px rgba(37, 23, 84, 0.3);
+}
+
+.secondary-button:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+/* Styles the feature section as a separate visual area so
+   the page does not feel like one continuous block. */
+.features-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+}
+
+.features-section h2 {
+  margin-bottom: 2.5rem;
+  text-align: center;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  color: #302858;
+}
+
+/* Uses a responsive grid so the feature cards automatically
+   adapt to different screen sizes. */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.feature-card {
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+  border: 1px solid rgba(108, 78, 217, 0.08);
+  border-radius: 24px;
+  background: white;
+  box-shadow: 0 15px 40px rgba(67, 48, 120, 0.1);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* Gives each card a different accent color while keeping
+   the overall design visually consistent. */
+.feature-card:nth-child(1) {
+  border-top: 6px solid #7b61d9;
+}
+
+.feature-card:nth-child(2) {
+  border-top: 6px solid #ef7f91;
+}
+
+.feature-card:nth-child(3) {
+  border-top: 6px solid #f2b84b;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(67, 48, 120, 0.16);
+}
+
+.feature-card h3 {
+  margin-bottom: 0.8rem;
+  font-size: 1.35rem;
+  color: #34295f;
+}
+
+.feature-card p {
+  color: #68627d;
+  line-height: 1.7;
+}
+
+/* Adjusts the layout for tablets and smaller screens. */
+@media (max-width: 800px) {
+  .hero-section {
+    padding: 4.5rem 1.5rem;
+  }
+
+  .features-section {
+    padding: 4rem 1.5rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Makes the hero content and buttons comfortable to use
+   on smaller mobile screens. */
+@media (max-width: 500px) {
+  .hero-section {
+    padding: 4rem 1rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .primary-button,
+  .secondary-button {
+    width: 100%;
+  }
+
+  .features-section {
+    padding: 3rem 1rem;
+  }
+}
