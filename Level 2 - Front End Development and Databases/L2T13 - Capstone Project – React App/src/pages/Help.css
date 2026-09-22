@@ -1,0 +1,80 @@
+.help-page {
+  min-height: calc(100vh - 80px);
+  padding: 4rem 2rem;
+}
+
+.help-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.help-header {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.help-header h1 {
+  margin-bottom: 1rem;
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.help-header p:last-child {
+  line-height: 1.6;
+}
+
+.eyebrow {
+  margin-bottom: 0.75rem;
+  font-size: 0.85rem;
+  font-weight: bold;
+  letter-spacing: 0.15rem;
+}
+
+.help-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.help-card {
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.help-card h2 {
+  margin-bottom: 0.75rem;
+  font-size: 1.2rem;
+}
+
+.help-card p {
+  line-height: 1.6;
+}
+
+.help-tips {
+  margin-top: 3rem;
+  padding: 2rem;
+  background-color: #1f2937;
+  color: white;
+  border-radius: 12px;
+}
+
+.help-tips h2 {
+  margin-bottom: 1rem;
+}
+
+.help-tips li {
+  margin-bottom: 0.6rem;
+}
+
+/* Display the help cards in a single column on smaller screens
+   so the instructions remain easy to read on mobile devices. */
+@media (max-width: 768px) {
+  .help-page {
+    padding: 3rem 1rem;
+  }
+
+  .help-grid {
+    grid-template-columns: 1fr;
+  }
+}

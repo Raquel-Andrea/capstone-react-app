@@ -1,0 +1,152 @@
+/* Styles the login page and creates a welcoming sign-in experience. */
+
+.login-page {
+  min-height: calc(100vh - 76px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1.5rem;
+  background:
+    radial-gradient(
+      circle at 10% 15%,
+      rgba(178, 157, 255, 0.3),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 85%,
+      rgba(239, 127, 145, 0.25),
+      transparent 30%
+    ),
+    #f8f7ff;
+}
+
+.login-container {
+  width: min(460px, 100%);
+}
+
+/* Gives the form a clean card appearance while keeping the
+   colorful page background visible around it. */
+.login-form {
+  padding: 2.5rem;
+  border: 1px solid #eeeaf9;
+  border-radius: 28px;
+  background: white;
+  box-shadow: 0 20px 50px rgba(67, 48, 120, 0.14);
+}
+
+.login-form h1 {
+  margin-bottom: 0.6rem;
+  color: #34295f;
+  font-size: 2.2rem;
+  text-align: center;
+}
+
+.login-form > p {
+  margin-bottom: 2rem;
+  color: #68627d;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* Keeps labels and their inputs visually connected and easy to
+   scan when completing the form. */
+.form-group {
+  margin-bottom: 1.3rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #40346b;
+  font-weight: 700;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border: 2px solid #e7e2f4;
+  border-radius: 12px;
+  outline: none;
+  background: #fcfbff;
+  color: #292445;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-group input:focus {
+  border-color: #7b61d9;
+  box-shadow: 0 0 0 4px rgba(123, 97, 217, 0.12);
+}
+
+/* Uses a strong color for errors so important validation
+   messages are immediately visible. */
+.error-message {
+  margin-bottom: 1rem;
+  padding: 0.85rem 1rem;
+  border-radius: 12px;
+  background: #ffe7eb;
+  color: #b8324d;
+  font-size: 0.95rem;
+}
+
+.success-message {
+  margin-bottom: 1rem;
+  padding: 0.85rem 1rem;
+  border-radius: 12px;
+  background: #e5f8ed;
+  color: #24744a;
+  font-size: 0.95rem;
+}
+
+/* Makes the submit button the main action on the page. */
+.login-button {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.95rem 1.2rem;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #6242c5, #8d6be5);
+  color: white;
+  font-weight: 700;
+  box-shadow: 0 10px 25px rgba(98, 66, 197, 0.25);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.login-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(98, 66, 197, 0.35);
+}
+
+.register-link {
+  margin-top: 1.5rem;
+  text-align: center;
+  color: #68627d;
+}
+
+.register-link a {
+  color: #6242c5;
+  font-weight: 700;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+/* Keeps the form comfortable to use on smaller screens. */
+@media (max-width: 500px) {
+  .login-page {
+    padding: 2rem 1rem;
+  }
+
+  .login-form {
+    padding: 1.75rem;
+    border-radius: 22px;
+  }
+
+  .login-form h1 {
+    font-size: 1.9rem;
+  }
+}

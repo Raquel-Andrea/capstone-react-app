@@ -1,0 +1,216 @@
+/* Styles the dashboard where users manage their personal events. */
+
+.dashboard-page {
+  min-height: calc(100vh - 76px);
+  padding: 3rem 1.5rem 5rem;
+  background:
+    radial-gradient(circle at 5% 10%, rgba(178, 157, 255, 0.25), transparent 25%),
+    radial-gradient(circle at 95% 90%, rgba(239, 127, 145, 0.2), transparent 25%),
+    #f8f7ff;
+}
+
+.dashboard-container {
+  width: min(1150px, 100%);
+  margin: 0 auto;
+}
+
+/* Creates a clear introduction area at the top of the dashboard. */
+.dashboard-header {
+  margin-bottom: 2rem;
+  padding: 2.2rem;
+  border-radius: 28px;
+  background: linear-gradient(135deg, #6242c5, #8d6be5);
+  color: white;
+  box-shadow: 0 18px 40px rgba(82, 57, 157, 0.2);
+}
+
+.dashboard-header h1 {
+  margin-bottom: 0.5rem;
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.dashboard-header p {
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.6;
+}
+
+/* Keeps the add-event action visually separate from the
+   event list so users can find it quickly. */
+.dashboard-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 2rem;
+}
+
+.add-event-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 1.5rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ef7f91, #e95f78);
+  color: white;
+  font-weight: 700;
+  box-shadow: 0 10px 24px rgba(233, 95, 120, 0.25);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.add-event-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px rgba(233, 95, 120, 0.35);
+}
+
+.events-section {
+  padding: 2rem;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 15px 40px rgba(67, 48, 120, 0.08);
+}
+
+.events-section h2 {
+  margin-bottom: 1.5rem;
+  color: #302858;
+  font-size: 1.8rem;
+}
+
+/* Displays events in a responsive layout that works on
+   desktop, tablet and mobile screens. */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.event-card {
+  position: relative;
+  overflow: hidden;
+  padding: 1.7rem;
+  border: 1px solid #eeeaf9;
+  border-radius: 22px;
+  background: white;
+  box-shadow: 0 12px 30px rgba(67, 48, 120, 0.08);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* Adds a colorful visual accent to the top of every event card. */
+.event-card::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(90deg, #7b61d9, #ef7f91, #f2b84b);
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 38px rgba(67, 48, 120, 0.14);
+}
+
+.event-card h3 {
+  margin: 0.4rem 0 1.2rem;
+  color: #34295f;
+  font-size: 1.35rem;
+}
+
+.event-card p {
+  margin-bottom: 0.7rem;
+  color: #68627d;
+  line-height: 1.6;
+}
+
+.event-card strong {
+  color: #40346b;
+}
+
+/* Keeps edit and delete controls together and easy to identify. */
+.event-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.edit-button,
+.delete-button {
+  flex: 1;
+  padding: 0.7rem 1rem;
+  border-radius: 12px;
+  font-weight: 700;
+  text-align: center;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.edit-button {
+  background: #eee9ff;
+  color: #6242c5;
+}
+
+.delete-button {
+  border: none;
+  background: #ffe3e7;
+  color: #c83f58;
+}
+
+.edit-button:hover,
+.delete-button:hover {
+  transform: translateY(-2px);
+  opacity: 0.85;
+}
+
+.empty-message {
+  padding: 2rem;
+  border: 2px dashed #d8d0f2;
+  border-radius: 18px;
+  background: #faf9ff;
+  color: #68627d;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* Switches the event cards to one column on smaller screens. */
+@media (max-width: 800px) {
+  .dashboard-page {
+    padding: 2rem 1rem 4rem;
+  }
+
+  .events-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-actions {
+    justify-content: stretch;
+  }
+
+  .add-event-button {
+    width: 100%;
+  }
+}
+
+/* Reduces spacing and button sizes on very small screens. */
+@media (max-width: 500px) {
+  .dashboard-header {
+    padding: 1.5rem;
+    border-radius: 22px;
+  }
+
+  .events-section {
+    padding: 1.25rem;
+    border-radius: 22px;
+  }
+
+  .event-card {
+    padding: 1.4rem;
+  }
+
+  .event-actions {
+    flex-direction: column;
+  }
+}
